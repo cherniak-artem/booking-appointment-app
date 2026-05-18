@@ -1,35 +1,51 @@
-# KPI 2026 GitHub Pages App Template
+# Booking Appointment App
 
-Starter repository for small coursework web applications that are implemented from existing markdown requirements and deployed to GitHub Pages.
+A modern, premium single-page application for booking auto service station appointments, built with pure HTML, CSS, and Vanilla JavaScript.
 
-## Intended use
+## Features
+- **Date & Time Selection**: Choose a date and a suitable 30/60/90/120 min slot between 08:00 and 18:00.
+- **Conflict Prevention**: Automatic validation to prevent overlapping appointments.
+- **State Persistence**: Uses `localStorage` to save all active and cancelled appointments across sessions.
+- **Premium Design**: Modern aesthetic featuring a glassmorphism header, smooth animations, and clear status indicators.
+- **Search & Filter**: Quickly find appointments by client name or comment.
 
-Use this repository as a template for:
-- the teacher's demo application;
-- student repositories created after requirements are already written;
-- small GitHub Pages projects that must stay within static hosting constraints.
+## Technology Stack
+- **Frontend**: Plain HTML, Vanilla CSS (with CSS variables and modern layout techniques like Grid/Flexbox), Vanilla JavaScript (ES Modules).
+- **Data Storage**: Client-side `localStorage`. No external backend required.
+- **Deployment**: GitHub Pages via GitHub Actions.
 
-## Suggested workflow
+## Running Locally
 
-1. Create a new repository from this template.
-2. Add the project requirements as markdown under `requirements/`.
-3. Invoke the `requirements-to-github-pages` skill inside the new repository.
-4. Let the skill:
-   - assess feasibility;
-   - choose the simplest viable stack;
-   - document SDRs;
-   - implement the app;
-   - add demo data and reset flow;
-   - update deployment files.
+Since this is a plain static website without build tools, you can simply run it by serving the directory locally.
+For example, using Python or Node.js:
 
-## Initial repository structure
+```bash
+# Using Python
+python -m http.server 8000
 
-- `requirements/` - place the markdown requirements here
-- `docs/sdr/` - software decision records
-- `data/` - seed and demo data if needed
-- `.github/workflows/` - GitHub Pages deployment workflow
+# Or using Node.js (npx)
+npx serve .
+```
 
-## Notes
+Then open `http://localhost:8000` or the provided local URL in your browser.
 
-This repository is intentionally minimal. It is not a finished application.
-It is a clean starting point for projects that will be generated from existing requirements.
+## Demo Data
+
+The app includes a preset of demo appointments. You can load or reset the demo data anytime by clicking the **"Скинути демо дані" (Reset demo data)** button in the top right corner of the header.
+
+## Deployment to GitHub Pages
+
+This project is configured to deploy automatically to GitHub Pages when changes are pushed to the `main` branch.
+
+**To enable it:**
+1. Push this repository to GitHub.
+2. Go to your repository settings -> **Pages**.
+3. Under **Build and deployment**, change the source from "Deploy from a branch" to **"GitHub Actions"**.
+4. The `.github/workflows/deploy.yml` workflow will handle the deployment automatically.
+
+## Architecture & Decisions
+
+Review the architectural decisions in the `docs/sdr/` folder:
+- [0001-stack-choice.md](docs/sdr/0001-stack-choice.md)
+- [0002-client-storage-choice.md](docs/sdr/0002-client-storage-choice.md)
+- [0003-routing-state-and-data-model.md](docs/sdr/0003-routing-state-and-data-model.md)

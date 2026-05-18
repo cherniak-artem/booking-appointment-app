@@ -1,0 +1,29 @@
+[
+  {
+    "id": "demo-1",
+    "date": "2026-05-18",
+    "startTime": "09:00",
+    "duration": 60,
+    "clientName": "Іван Франко",
+    "comment": "Заміна масла",
+    "status": "active"
+  },
+  {
+    "id": "demo-2",
+    "date": "2026-05-18",
+    "startTime": "10:30",
+    "duration": 90,
+    "clientName": "Леся Українка",
+    "comment": "Діагностика ходової",
+    "status": "active"
+  },
+  {
+    "id": "demo-3",
+    "date": "2026-05-18",
+    "startTime": "14:00",
+    "duration": 120,
+    "clientName": "Тарас Шевченко",
+    "comment": "Немає деталей, відміна",
+    "status": "cancelled"
+  }
+]
